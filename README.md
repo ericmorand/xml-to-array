@@ -1,4 +1,4 @@
-# Plain and simple XML-to-array converter
+# Plain and simple XML-to-array converter [![Build Status][travis-image]][travis-url]
 
 This package provides a very simple converter to convert an XML string to an array. No attributes support, no complex logic, just a plain and simple converter that just works.
 
@@ -45,3 +45,6 @@ By running this code, `$array` would contain:
     ]
 ]
 ```
+
+[travis-image]: https://travis-ci.org/ericmorand/xml-to-array.svg?branch=master
+[travis-url]: https://travis-ci.org/ericmorand/xml-to-array
