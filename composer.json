@@ -1,0 +1,26 @@
+{
+    "name": "ericmorand/xml-to-array",
+    "description": "Simple XML-to-array converter",
+    "type": "library",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Eric MORAND",
+            "email": "eric.morand@gmail.com"
+        }
+    ],
+    "require": {
+      "ext-simplexml": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EricMorand\\XMLToArray\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --color=always"
+    }
+}
