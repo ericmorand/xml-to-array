@@ -76,4 +76,41 @@ class ConverterTest extends TestCase
 
         $this->assertSame($expected, $converter->convertXMLElement($xmlElement));
     }
+
+    /**
+     * @see https://github.com/ericmorand/xml-to-array/issues/1
+     */
+    function testSupportMoreThanTwoCHildren()
+    {
+        $xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<foo>
+    <child>
+        <prop0>foo1</prop0>
+    </child>
+    <child>
+        <prop0>foo2</prop0>
+    </child>
+    <child>
+        <prop0>foo3</prop0>
+    </child>
+</foo>";
+
+        $converter = new Converter();
+
+        $expected = [
+            'child' => [
+                [
+                    'prop0' => 'foo1'
+                ],
+                [
+                    'prop0' => 'foo2'
+                ],
+                [
+                    'prop0' => 'foo3'
+                ]
+            ]
+        ];
+
+        $this->assertSame($expected, $converter->convertXML($xml));
+    }
 }

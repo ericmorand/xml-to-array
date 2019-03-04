@@ -31,10 +31,10 @@ class Converter
 
         foreach ($XMLElement->children() as $key => $value) {
             if (array_key_exists($key, $result)) {
-                if (!isset($extract[$key][0])) {
-                    $tmp_extract = $result[$key];
+                if (!isset($result[$key][0])) {
+                    $tmpResult = $result[$key];
                     $result[$key] = array();
-                    $result[$key][0] = $tmp_extract;
+                    $result[$key][0] = $tmpResult;
                 } else {
                     $result[$key] = (array)$result[$key];
                 }
